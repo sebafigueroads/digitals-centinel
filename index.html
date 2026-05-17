@@ -3133,6 +3133,56 @@ function WebMockupSection({ variant }) {
         ))}
       </div>
 
+      {/* VIGÍA EXCLUSIVE · video hero + ROI calc embebido antes del iframe */}
+      {variant === 'vigia' && (
+        <div style={{ marginBottom: '1.4rem', border: '2px solid #A3E635', borderRadius: '16px', overflow: 'hidden', background: '#04060C' }}>
+          <div style={{ background: '#A3E635', color: '#04102E', padding: '.6rem 1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '.6rem' }}>
+            <span style={{ fontFamily: 'var(--fm)', fontSize: '.62rem', letterSpacing: '.22em', textTransform: 'uppercase', fontWeight: 900 }}>★ PIEZAS EXCLUSIVAS VIGÍA · VIDEO HERO + CALCULADORA ROI EMBEBIDA</span>
+            <span style={{ fontFamily: 'var(--fm)', fontSize: '.55rem', letterSpacing: '.18em', textTransform: 'uppercase', fontWeight: 700 }}>AWARD-WINNING ONLY</span>
+          </div>
+
+          {/* VIDEO HERO CINEMATOGRÁFICO */}
+          <div style={{ position: 'relative', overflow: 'hidden', minHeight: '420px' }}>
+            <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+              <source src="assets/video/centinel-hero.mp4" type="video/mp4"/>
+            </video>
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(4,16,46,0.40) 0%, rgba(4,16,46,0.92) 100%)', zIndex: 1 }}/>
+            <div style={{ position: 'absolute', top: 0, right: 0, width: '2px', height: '100%', background: '#A3E635', boxShadow: '0 0 20px #A3E635', zIndex: 2 }}/>
+            <div style={{ position: 'relative', zIndex: 3, padding: '3rem 2.5rem', minHeight: '420px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+              <span style={{ fontFamily: 'var(--fm)', fontSize: '.62rem', letterSpacing: '.24em', color: '#A3E635', textTransform: 'uppercase', fontWeight: 800, marginBottom: '.8rem', display: 'inline-block' }}>★ VIDEO HERO · LOOP 12s · CINEMATOGRÁFICO</span>
+              <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '3.4rem', color: '#FFFFFF', lineHeight: 1, letterSpacing: '0.01em', marginBottom: '.8rem', textTransform: 'uppercase' }}>Vigilamos lo que <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', color: '#A3E635', fontWeight: 400 }}>no se ve.</em></h2>
+              <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.55, maxWidth: 580, marginBottom: '1.2rem' }}>Cada cliente entra al sitio y siente que Centinel ya está protegiéndolo antes de firmar contrato. 12 segundos cinemáticos · SOC en vivo · cursor CCTV · cero discount visual.</p>
+              <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap' }}>
+                <button style={{ background: '#A3E635', color: '#04102E', padding: '.95rem 1.6rem', borderRadius: '100px', border: 0, fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400, fontSize: '1rem', cursor: 'pointer', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Te custodiamos desde hoy →</button>
+                <button style={{ background: 'rgba(255,255,255,0.10)', color: '#fff', padding: '.95rem 1.6rem', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.25)', fontFamily: "'Bebas Neue', sans-serif", fontSize: '1rem', cursor: 'pointer', textTransform: 'uppercase' }}>Ver dashboard SOC live</button>
+              </div>
+            </div>
+          </div>
+
+          {/* CALCULADORA ROI EMBEBIDA · Vigía exclusive */}
+          <div style={{ background: 'linear-gradient(135deg, #04102E 0%, #0A0F1A 100%)', padding: '2.5rem 2.5rem', borderTop: '1px solid rgba(163,230,53,0.25)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '2rem', alignItems: 'center' }}>
+              <div>
+                <span style={{ fontFamily: 'var(--fm)', fontSize: '.62rem', letterSpacing: '.24em', color: '#A3E635', textTransform: 'uppercase', fontWeight: 800, marginBottom: '.8rem', display: 'inline-block' }}>★ WIDGET EMBEBIDO · CALCULADORA ROI</span>
+                <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '2.4rem', color: '#FFFFFF', lineHeight: 1.05, letterSpacing: '0.01em', marginBottom: '.7rem', textTransform: 'uppercase' }}>¿Cuánto recupera tu empresa <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', color: '#A3E635', fontWeight: 400 }}>al mes?</em></h3>
+                <p style={{ fontSize: '.92rem', color: 'rgba(255,255,255,0.78)', lineHeight: 1.6, marginBottom: '1rem' }}>El widget calcula en vivo cuánto recuperas en mermas, robos y vandalismo evitados después de contratar Centinel. 4 variables · sin login · resultado al instante. Pieza pensada para cerrar dudas del CFO antes de la cotización.</p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '.6rem', paddingTop: '1rem', borderTop: '1px solid rgba(163,230,53,0.20)' }}>
+                  {[{ v: '−55%', k: 'Guardia OS-10' }, { v: '−62%', k: 'SOC monitoreo' }, { v: '−82%', k: 'Guardia + SOC' }].map((s, i) => (
+                    <div key={i}>
+                      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.6rem', color: '#A3E635', letterSpacing: '0.01em', lineHeight: 1 }}>{s.v}</div>
+                      <div style={{ fontSize: '.6rem', color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: '.1em', marginTop: '.3rem', fontFamily: 'var(--fm)' }}>{s.k}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(163,230,53,0.30)', borderRadius: '14px', padding: '1.6rem 1.4rem', boxShadow: '0 30px 80px -20px rgba(163,230,53,0.20)' }}>
+                <ROICalcInlineVigia/>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div style={{ fontFamily: 'var(--fm)', fontSize: '.6rem', letterSpacing: '.2em', color: c.color, textTransform: 'uppercase', fontWeight: 700, marginBottom: '.7rem' }}>↓ WEB COMPLETA NAVEGABLE · IFRAME LIVE</div>
 
       <div className="info-card" style={{ padding: 0, overflow: 'hidden', border: `2px solid ${c.color}`, borderRadius: '14px', boxShadow: `0 30px 70px ${c.color}22` }}>
@@ -3144,6 +3194,65 @@ function WebMockupSection({ variant }) {
         <p>Si esta variante captura lo que Centinel quiere comunicar, en 1 semana pasamos a wireframes finales con tu equipo. Luego: diseño high-fidelity (2 sem) → desarrollo + integración Hapee CRM (2-3 sem) → QA + go-live (semana final). <b>5-6 semanas desde firma a publicación</b>. Cada sección de la web actual queda mejorada · ninguna se pierde.</p>
       </div>
     </section>
+  );
+}
+
+/* ====================================================================
+   ROI CALC INLINE · versión compacta para embeber en Vigía
+   ==================================================================== */
+function ROICalcInlineVigia() {
+  const [perdidas, setPerdidas] = React.useState(8000000);
+  const [cobertura, setCobertura] = React.useState('combo');
+  const coberturas = {
+    guardia: { name: 'Guardia OS-10', red: 0.55, costo: 1800000 },
+    soc:     { name: 'SOC CCTV',       red: 0.62, costo: 1500000 },
+    combo:   { name: '★ Combo',         red: 0.82, costo: 2900000 }
+  };
+  const c = coberturas[cobertura];
+  const ahorroMes = Math.round(perdidas * c.red);
+  const netoMes = ahorroMes - c.costo;
+  const recuperaMeses = c.costo > 0 && ahorroMes > 0 ? Math.max(1, Math.round((c.costo / ahorroMes) * 12 * 10) / 10) : 0;
+  const fmt = (n) => '$' + Math.round(n).toLocaleString('es-CL');
+
+  return (
+    <div>
+      <div style={{ marginBottom: '1rem' }}>
+        <div style={{ fontFamily: 'var(--fm)', fontSize: '.58rem', letterSpacing: '.18em', color: '#A3E635', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.4rem' }}>1 · PÉRDIDAS MENSUALES HOY</div>
+        <input type="range" min="500000" max="50000000" step="500000" value={perdidas} onChange={(e) => setPerdidas(Number(e.target.value))} style={{ width: '100%', accentColor: '#A3E635', cursor: 'pointer' }}/>
+        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.8rem', color: '#FFFFFF', letterSpacing: '0.01em', lineHeight: 1, marginTop: '.3rem' }}>{fmt(perdidas)} <span style={{ fontSize: '.7rem', color: 'rgba(255,255,255,0.55)', fontFamily: 'var(--fm)' }}>/ mes</span></div>
+      </div>
+
+      <div style={{ marginBottom: '1.2rem' }}>
+        <div style={{ fontFamily: 'var(--fm)', fontSize: '.58rem', letterSpacing: '.18em', color: '#A3E635', textTransform: 'uppercase', fontWeight: 700, marginBottom: '.4rem' }}>2 · COBERTURA CENTINEL</div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '.4rem' }}>
+          {Object.entries(coberturas).map(([k, v]) => (
+            <button key={k} onClick={() => setCobertura(k)}
+              style={{ padding: '.55rem .4rem', borderRadius: '8px', border: cobertura === k ? '2px solid #A3E635' : '1px solid rgba(255,255,255,0.15)', background: cobertura === k ? 'rgba(163,230,53,0.15)' : 'rgba(255,255,255,0.04)', color: cobertura === k ? '#A3E635' : 'rgba(255,255,255,0.65)', fontFamily: 'var(--fb, Inter), sans-serif', fontSize: '.7rem', fontWeight: cobertura === k ? 800 : 600, cursor: 'pointer', textAlign: 'center' }}>
+              <div style={{ fontSize: '.78rem' }}>{v.name}</div>
+              <div style={{ fontSize: '.62rem', marginTop: '.15rem', opacity: 0.85 }}>−{Math.round(v.red * 100)}%</div>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ background: 'linear-gradient(135deg, rgba(163,230,53,0.18), rgba(4,16,46,0.4))', borderRadius: '10px', padding: '1rem 1.2rem', border: '1px solid rgba(163,230,53,0.4)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '.8rem', marginBottom: '.5rem' }}>
+          <div>
+            <div style={{ fontFamily: 'var(--fm)', fontSize: '.55rem', letterSpacing: '.16em', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', marginBottom: '.2rem' }}>Evitas/mes</div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.4rem', color: '#A3E635', lineHeight: 1 }}>{fmt(ahorroMes)}</div>
+          </div>
+          <div>
+            <div style={{ fontFamily: 'var(--fm)', fontSize: '.55rem', letterSpacing: '.16em', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', marginBottom: '.2rem' }}>Costo/mes</div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.4rem', color: '#FFFFFF', lineHeight: 1 }}>{fmt(c.costo)}</div>
+          </div>
+        </div>
+        <div style={{ paddingTop: '.6rem', borderTop: '1px dashed rgba(163,230,53,0.30)' }}>
+          <div style={{ fontFamily: 'var(--fm)', fontSize: '.55rem', letterSpacing: '.18em', color: '#A3E635', textTransform: 'uppercase', fontWeight: 800, marginBottom: '.2rem' }}>{netoMes > 0 ? '💰 RETORNO NETO MENSUAL' : '⚠ INVERSIÓN PREVENCIÓN'}</div>
+          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '2rem', color: netoMes > 0 ? '#A3E635' : '#FBBF24', lineHeight: 1 }}>{fmt(Math.abs(netoMes))}</div>
+          <div style={{ fontFamily: 'var(--fm)', fontSize: '.6rem', color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', marginTop: '.3rem' }}>Recuperas inversión en <span style={{ color: '#A3E635', fontWeight: 800 }}>{recuperaMeses < 12 ? recuperaMeses + ' meses' : (recuperaMeses/12).toFixed(1) + ' años'}</span></div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -4013,15 +4122,29 @@ function LandMineriaSection() {
           <div style={{ marginLeft: '1rem', padding: '.35rem .7rem', background: '#fff', border: '1px solid #ddd', borderRadius: '100px', fontFamily: "'JetBrains Mono', monospace", fontSize: '.66rem', color: '#555', flex: 1, textAlign: 'center' }}>— centinel.cl/seguridad-faena</div>
         </div>
 
-        {/* HERO */}
-        <div style={{ padding: '3rem 2.5rem', background: 'linear-gradient(135deg, #0A0F1A 0%, #1F2937 100%)', color: '#fff', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(10,102,194,0.25), transparent 70%)' }}/>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '.62rem', letterSpacing: '.24em', color: '#0A66C2', textTransform: 'uppercase', fontWeight: 800, display: 'inline-block', marginBottom: '.8rem' }}>★ SEGURIDAD INDUSTRIAL · NORMATIVA OS-10</span>
-          <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '3rem', letterSpacing: '0.01em', lineHeight: 1, marginBottom: '.8rem', textTransform: 'uppercase' }}>Tu faena no se detiene · <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', color: '#DB2231', fontWeight: 400 }}>tu seguridad tampoco</em></h1>
-          <p style={{ fontSize: '1rem', lineHeight: 1.55, color: 'rgba(255,255,255,0.85)', maxWidth: '600px', marginBottom: '1.4rem' }}>Seguridad para faena minera, planta industrial, planta forestal o subestación. Guardias OS-10 vigentes + SOC integrado + reporting al jefe de prevención de riesgos del mandante.</p>
-          <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap' }}>
-            <button style={{ background: '#0A66C2', color: '#fff', padding: '.9rem 1.6rem', borderRadius: '100px', border: 0, fontFamily: "'Bebas Neue', sans-serif", fontSize: '1rem', letterSpacing: '0.03em', cursor: 'pointer', textTransform: 'uppercase' }}>Hablar con cuenta industrial →</button>
-            <button style={{ background: 'rgba(255,255,255,0.10)', color: '#fff', padding: '.9rem 1.6rem', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.25)', fontFamily: "'Bebas Neue', sans-serif", fontSize: '1rem', cursor: 'pointer', textTransform: 'uppercase' }}>Descargar caso Codelco</button>
+        {/* HERO · con video real Centinel */}
+        <div style={{ minHeight: '440px', position: 'relative', overflow: 'hidden', color: '#fff' }}>
+          <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+            <source src="assets/video/centinel-showcase.mp4" type="video/mp4"/>
+          </video>
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,15,26,0.85) 0%, rgba(31,41,55,0.85) 100%)', zIndex: 1 }}/>
+          <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(10,102,194,0.35), transparent 70%)', zIndex: 2 }}/>
+          <div style={{ position: 'relative', zIndex: 3, padding: '3rem 2.5rem' }}>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '.62rem', letterSpacing: '.24em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 800, display: 'inline-block', marginBottom: '.8rem' }}>★ SEGURIDAD INDUSTRIAL · NORMATIVA OS-10</span>
+            <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '3rem', letterSpacing: '0.01em', lineHeight: 1, marginBottom: '.8rem', textTransform: 'uppercase' }}>Tu faena no se detiene · <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', color: '#DB2231', fontWeight: 400 }}>tu seguridad tampoco</em></h1>
+            <p style={{ fontSize: '1rem', lineHeight: 1.55, color: 'rgba(255,255,255,0.92)', maxWidth: '600px', marginBottom: '1.4rem' }}>Seguridad para faena minera, planta industrial, planta forestal o subestación. Guardias OS-10 vigentes + SOC integrado + reporting al jefe de prevención de riesgos del mandante.</p>
+            <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap' }}>
+              <button style={{ background: '#DB2231', color: '#fff', padding: '.9rem 1.6rem', borderRadius: '100px', border: 0, fontFamily: "'Bebas Neue', sans-serif", fontSize: '1rem', letterSpacing: '0.03em', cursor: 'pointer', textTransform: 'uppercase' }}>Hablar con cuenta industrial →</button>
+              <button style={{ background: 'rgba(255,255,255,0.10)', color: '#fff', padding: '.9rem 1.6rem', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.25)', fontFamily: "'Bebas Neue', sans-serif", fontSize: '1rem', cursor: 'pointer', textTransform: 'uppercase' }}>Descargar caso Codelco</button>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '2rem', paddingTop: '1.4rem', borderTop: '1px solid rgba(255,255,255,0.15)' }}>
+              {[{ v: '14 m', k: 'CODELCO' }, { v: '99.4%', k: 'UPTIME' }, { v: '0', k: 'INCIDENTES' }, { v: '24/7', k: 'COBERTURA' }].map((s, i) => (
+                <div key={i}>
+                  <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.8rem', color: '#FFCE00', letterSpacing: '0.01em', lineHeight: 1 }}>{s.v}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '.55rem', letterSpacing: '.18em', color: 'rgba(255,255,255,0.75)', textTransform: 'uppercase', marginTop: '.3rem' }}>{s.k}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
