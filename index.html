@@ -918,20 +918,20 @@ function ShowcaseSection() {
         title="Showcase visual · <em>piezas Centinel reales</em>"
         desc="4 piezas finales producidas con la marca real Centinel · paleta navy + rojo Centinel + escudo · listas para publicar. Más banco de imágenes IA hero industrial cinematográfico para ampliar producción mensual con consistencia."/>
 
-      {/* 2 VIDEOS REALES CENTINEL */}
-      <div className="d-kicker yellow" style={{ marginBottom: '1rem' }}>★ Videos Centinel · reales con marca aplicada · loop autoplay</div>
+      {/* 2 VIDEOS REALES CENTINEL · con controles para asegurar reproducción */}
+      <div className="d-kicker yellow" style={{ marginBottom: '1rem' }}>★ Videos Centinel · reales con marca aplicada · click play o autoplay muted</div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
         {[
           { src: 'assets/video/centinel-hero.mp4',     tag: 'VIDEO HERO · CINEMATOGRÁFICO', title: 'Hero principal · loop 12s', useFor: 'Hero web Vigía · LinkedIn cover · paid Meta', poster: 'assets/showcase/centinel-hero-guardias-edificio.png' },
-          { src: 'assets/video/centinel-showcase.mp4', tag: 'VIDEO SHOWCASE · OPERATIVO',   title: 'Operación SOC + guardia · loop 10s', useFor: 'Landing minería · paid LinkedIn · sales deck', poster: 'assets/showcase/centinel-soc-dark.png' }
+          { src: 'assets/video/centinel-showcase.mp4', tag: 'VIDEO SHOWCASE · OPERATIVO',   title: 'Operación SOC + guardia · loop 10s', useFor: 'Landing minería · paid LinkedIn · sales deck', poster: 'assets/showcase/centinel-soc-operador-real.png' }
         ].map((v, i) => (
-          <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: '1px solid var(--accent)', background: 'var(--accent-soft)' }}>
+          <div key={i} style={{ borderRadius: '14px', overflow: 'hidden', border: '2px solid var(--accent)', background: '#04060C' }}>
             <div style={{ position: 'relative', aspectRatio: '16/9', background: '#04060C' }}>
-              <video autoPlay muted loop playsInline poster={v.poster} style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}>
+              <video autoPlay muted loop playsInline controls preload="auto" poster={v.poster} style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover', background: '#000' }}>
                 <source src={v.src} type="video/mp4"/>
+                Tu navegador no soporta el video. <a href={v.src}>Descargar MP4</a>
               </video>
-              <span style={{ position: 'absolute', top: '12px', left: '12px', padding: '.3rem .7rem', background: 'var(--accent)', color: '#fff', borderRadius: '999px', fontFamily: 'var(--fm)', fontSize: '.55rem', letterSpacing: '.18em', fontWeight: 800, textTransform: 'uppercase' }}>{v.tag}</span>
-              <span style={{ position: 'absolute', bottom: '12px', right: '12px', padding: '.25rem .55rem', background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(8px)', color: '#A3E635', borderRadius: '4px', fontFamily: 'var(--fm)', fontSize: '.55rem', letterSpacing: '.14em', fontWeight: 700, textTransform: 'uppercase' }}>▶ AUTOPLAY</span>
+              <span style={{ position: 'absolute', top: '12px', left: '12px', padding: '.3rem .7rem', background: 'var(--accent)', color: '#fff', borderRadius: '999px', fontFamily: 'var(--fm)', fontSize: '.55rem', letterSpacing: '.18em', fontWeight: 800, textTransform: 'uppercase', zIndex: 2, pointerEvents: 'none' }}>{v.tag}</span>
             </div>
             <div style={{ padding: '1rem 1.2rem 1.2rem' }}>
               <h5 style={{ fontFamily: 'var(--fd)', margin: 0, marginBottom: '.4rem', color: 'var(--shell-ink)' }}>{v.title}</h5>
@@ -1082,15 +1082,13 @@ function HeroSection() {
   return (
     <section>
       {/* COVER · cinematic con VIDEO REAL Centinel */}
-      <div className="d-cover d-stagger" style={{ minHeight: '78vh', position: 'relative', overflow: 'hidden' }}>
-        <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+      <div className="d-cover d-stagger" style={{ minHeight: '78vh', position: 'relative', overflow: 'hidden', background: '#0a0b0e' }}>
+        <video autoPlay muted loop playsInline preload="auto" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0.6 }}>
           <source src="assets/video/centinel-hero.mp4" type="video/mp4"/>
         </video>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,11,14,0.55) 0%, rgba(10,11,14,0.85) 100%)', zIndex: 1 }}/>
-        <div className="d-dotgrid" style={{ position: 'relative', zIndex: 2 }}/>
-        <div className="d-holo yellow" style={{ top: '-80px', left: '-50px' }}>CENTINEL</div>
-        <div className="d-holo" style={{ bottom: '40px', right: '-100px' }}>SECURITY SERVICE</div>
-        <div className="d-scanline"/>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 30% 70%, rgba(219,34,49,0.20), transparent 50%), linear-gradient(180deg, rgba(10,11,14,0.30) 0%, rgba(10,11,14,0.75) 100%)', zIndex: 1, pointerEvents: 'none' }}/>
+        <div className="d-holo yellow" style={{ top: '-80px', left: '-50px', zIndex: 2 }}>CENTINEL</div>
+        <div className="d-holo" style={{ bottom: '40px', right: '-100px', zIndex: 2 }}>SECURITY SERVICE</div>
 
         <div style={{ position: 'relative', zIndex: 5, display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.4rem', flexWrap: 'wrap' }}>
@@ -4092,12 +4090,12 @@ function LandMineriaSection() {
         </div>
 
         {/* HERO · con video real Centinel */}
-        <div style={{ minHeight: '440px', position: 'relative', overflow: 'hidden', color: '#fff' }}>
-          <video autoPlay muted loop playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+        <div style={{ minHeight: '440px', position: 'relative', overflow: 'hidden', color: '#fff', background: '#0A0F1A' }}>
+          <video autoPlay muted loop playsInline preload="auto" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0.55 }}>
             <source src="assets/video/centinel-showcase.mp4" type="video/mp4"/>
           </video>
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,15,26,0.85) 0%, rgba(31,41,55,0.85) 100%)', zIndex: 1 }}/>
-          <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(10,102,194,0.35), transparent 70%)', zIndex: 2 }}/>
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,15,26,0.55) 0%, rgba(31,41,55,0.70) 100%)', zIndex: 1, pointerEvents: 'none' }}/>
+          <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(10,102,194,0.35), transparent 70%)', zIndex: 2, pointerEvents: 'none' }}/>
           <div style={{ position: 'relative', zIndex: 3, padding: '3rem 2.5rem' }}>
             <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '.62rem', letterSpacing: '.24em', color: '#FFCE00', textTransform: 'uppercase', fontWeight: 800, display: 'inline-block', marginBottom: '.8rem' }}>★ SEGURIDAD INDUSTRIAL · NORMATIVA OS-10</span>
             <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '3rem', letterSpacing: '0.01em', lineHeight: 1, marginBottom: '.8rem', textTransform: 'uppercase' }}>Tu faena no se detiene · <em style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', color: '#DB2231', fontWeight: 400 }}>tu seguridad tampoco</em></h1>
