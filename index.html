@@ -566,15 +566,10 @@ function CentinelCATLockup({ size = 30 }) {
   return <CentinelLogo size={size * 1.2}/>;
 }
 
-function DigitalsLogo({ size = 24, color = '#F4F2EC', accent = '#C6FF3A' }) {
+function DigitalsLogo({ size = 24 }) {
   return (
-    <span style={{
-      fontFamily: "'Inter Tight', sans-serif",
-      fontWeight: 800, fontSize: size,
-      letterSpacing: '-0.04em', color, lineHeight: 1
-    }}>
-      Digitals<span style={{ color: accent }}>.</span>
-    </span>
+    <img src="assets/logo/digitals-agencia.png" alt="Digitals · Agencia & Consultora"
+      style={{ height: size * 1.1, width: 'auto', objectFit: 'contain', display: 'inline-block', verticalAlign: 'middle' }}/>
   );
 }
 
@@ -1107,8 +1102,8 @@ function HeroSection() {
             <span className="d-kicker yellow">Alianza Centinel · Digitals</span>
           </div>
 
-          <div className="d-display-xl" style={{ color: 'var(--ink)', maxWidth: '14ch' }}>
-            Seguridad<br/><span className="d-hl yellow" style={{ fontSize: '0.94em' }}>profesional.</span>
+          <div className="d-display-xl" style={{ color: 'var(--ink)', maxWidth: '14ch', fontSize: 'clamp(3.4rem, 9vw, 8.5rem)', lineHeight: 0.92 }}>
+            Seguridad<br/><span className="d-hl yellow" style={{ fontSize: '0.92em', wordBreak: 'keep-all' }}>profesional.</span>
           </div>
 
           <div style={{ marginTop: '2.4rem', display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '3rem', alignItems: 'end' }}>
